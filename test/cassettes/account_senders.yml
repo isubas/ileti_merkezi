@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://dev.iletimerkezi.com/index.php?function=api&obj1=getSmsHeader&special_password=_Arg_ns_mmm&special_username=Ns_eemsm
+    body:
+      encoding: UTF-8
+      string: |-
+        <smsApi>
+        <userInfo>
+        <userName>USERNAME</userName>
+        <userPassword>PASSWORD</userPassword>
+        <smsType>2</smsType>
+        </userInfo>
+        </smsApi>
+    headers:
+      Accept:
+      - xml
+      Content-Type:
+      - text/xml;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 11 Mar 2018 13:30:16 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - emsid=oofvvmtuu9mk2290sa7607hch6; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: "<smsHeaderInfo><headerInfo>BAR</headerInfo><headerInfo>FOO</headerInfo></smsHeaderInfo>"
+    http_version: 
+  recorded_at: Sun, 11 Mar 2018 13:30:16 GMT
+recorded_with: VCR 4.0.0

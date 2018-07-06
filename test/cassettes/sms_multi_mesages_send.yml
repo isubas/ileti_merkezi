@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iletimerkezi.com/v1/send-sms
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <request>
+        <authentication>
+        <username>USERNAME</username>
+        <password>PASSWORD</password>
+        </authentication>
+        <order>
+        <sender>ILETI MRKZI</sender>
+        <sendDateTime>11/03/2018 16:30</sendDateTime>
+        <message>
+        <text>First Test Message</text>
+        <receipents>
+        <number>0USERNAME</number>
+        </receipents>
+        </message><message>
+        <text>Second Test Message</text>
+        <receipents>
+        <number>0USERNAME</number>
+        </receipents>
+        </message>
+        </order>
+        </request>
+    headers:
+      Accept:
+      - xml
+      Content-Type:
+      - text/xml;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        xLDFn2xlbSBiYcWfYXLEsWzEsQ==
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 11 Mar 2018 13:30:17 GMT
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '163'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - emsid=bop5iuo86dl3cauhldsok1bou4; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <status>
+            <code>200</code>
+            <message>İşlem başarılı</message>
+          </status>
+          <order>
+            <id>51502517</id>
+          </order>
+        </response>
+    http_version: 
+  recorded_at: Sun, 11 Mar 2018 13:30:17 GMT
+recorded_with: VCR 4.0.0

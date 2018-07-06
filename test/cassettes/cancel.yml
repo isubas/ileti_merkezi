@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iletimerkezi.com/v1/cancel-order
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <request>
+        <authentication>
+        <username>USERNAME</username>
+        <password>PASSWORD</password>
+        </authentication>
+        <order>
+        <id>100</id>
+        </order>
+        </request>
+    headers:
+      Accept:
+      - xml
+      Content-Type:
+      - text/xml;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 455
+      message: !binary |-
+        U2lwYXJpxZ8gYnVsdW5hbWFkxLE=
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 11 Mar 2018 13:30:16 GMT
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '150'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - emsid=j2an04uor8mk9pq182nik7ous7; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <status>
+            <code>455</code>
+            <message>Sipariş bulunamadı</message>
+          </status>
+        </response>
+    http_version: 
+  recorded_at: Sun, 11 Mar 2018 13:30:16 GMT
+recorded_with: VCR 4.0.0

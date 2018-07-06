@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'ileti_merkezi'
+require 'dotenv/load'
+
+require 'pry'
+Pry.start

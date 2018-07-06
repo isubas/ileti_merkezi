@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.iletimerkezi.com/v1/get-balance
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <request>
+        <authentication>
+        <username>USERNAME</username>
+        <password>PASSWORD</password>
+        </authentication>
+        <order>
+
+        </order>
+        </request>
+    headers:
+      Accept:
+      - xml
+      Content-Type:
+      - text/xml;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        xLDFn2xlbSBiYcWfYXLEsWzEsQ==
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 11 Mar 2018 14:00:09 GMT
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - emsid=e8sgajrb3ja2asmn0o2nla0pf5; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+          <status>
+            <code>200</code>
+            <message>İşlem başarılı</message>
+          </status>
+          <balance>
+            <amount>1</amount>
+            <sms>62</sms>
+          </balance>
+        </response>
+    http_version: 
+  recorded_at: Sun, 11 Mar 2018 14:00:09 GMT
+recorded_with: VCR 4.0.0
