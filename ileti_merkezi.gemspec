@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
     api.iletimerkezi.com uzerinden toplu sms gonderme,
     raporlama gibi islemleri yapabilmek icin hazırlanmistir.
   '
-  spec.homepage      = 'https://github.com/isubas/iletimerkezi/'
+  spec.homepage      = 'https://github.com/isubas/ileti_merkezi'
   spec.license       = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|

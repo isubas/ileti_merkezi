@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ileti_merkezi (1.0.0)
+    ileti_merkezi (0.1.0)
       ox (~> 2.8, >= 2.8.2)
 
 GEM
