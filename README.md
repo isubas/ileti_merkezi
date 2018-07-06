@@ -1,3 +1,7 @@
+[![CircleCI](https://circleci.com/gh/isubas/ileti_merkezi.svg?style=svg)](https://circleci.com/gh/isubas/ileti_merkezi)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b427c95759e1dca1e3dc/maintainability)](https://codeclimate.com/github/isubas/ileti_merkezi/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b427c95759e1dca1e3dc/test_coverage)](https://codeclimate.com/github/isubas/ileti_merkezi/test_coverage)
+
 # IletiMerkezi
 iletimerkezi.com API'lerini kullanarak toplu sms gönderme ve raporlama
 işlemlerini yapabilmek için hazırlanan Ruby istemcisidir.
