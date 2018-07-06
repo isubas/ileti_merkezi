@@ -40,7 +40,7 @@ module IletiMerkezi
 
     def hmac
       OpenSSL::HMAC.hexdigest(
-        OpenSSL::Digest.new('sha256'), secret_key, public_key
+        OpenSSL::Digest.new('sha256'), secret_key.to_s, public_key.to_s
       )
     end
 
