@@ -13,6 +13,7 @@ end
 group :test do
   gem 'minitest-focus'
   gem 'minitest-reporters'
+  gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
 end
