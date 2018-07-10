@@ -2,6 +2,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/b427c95759e1dca1e3dc/maintainability)](https://codeclimate.com/github/isubas/ileti_merkezi/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b427c95759e1dca1e3dc/test_coverage)](https://codeclimate.com/github/isubas/ileti_merkezi/test_coverage)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cecce51ce4d94f3ca1dcc1e99bdcbce6)](https://www.codacy.com/app/isubas/ileti_merkezi?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=isubas/ileti_merkezi&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/isubas/ileti_merkezi.svg?branch=master)](https://travis-ci.org/isubas/ileti_merkezi)
 
 # IletiMerkezi
 iletimerkezi.com API'lerini kullanarak toplu sms gönderme ve raporlama
