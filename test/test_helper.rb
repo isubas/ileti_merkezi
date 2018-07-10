@@ -1,5 +1,9 @@
-require 'ileti_merkezi'
+require 'simplecov'
+SimpleCov.start do
+  add_filter '/test/'
+end
 
+require 'ileti_merkezi'
 require 'dotenv/load'
 require 'minitest/autorun'
 require 'minitest/focus'
