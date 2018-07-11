@@ -266,7 +266,7 @@ IM_SENDER = 'SENDER'
 
 **Not:** Kullanıcı adı ve paralo bilgilerinin yapılandırmada doldurulmuş olması gerekmektedir. 
 
-```
+```ruby
   IletiMerkezi.senders
 ```
 
