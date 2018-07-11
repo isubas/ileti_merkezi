@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/isubas/ileti_merkezi.svg?style=svg)](https://circleci.com/gh/isubas/ileti_merkezi)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b427c95759e1dca1e3dc/maintainability)](https://codeclimate.com/github/isubas/ileti_merkezi/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/b427c95759e1dca1e3dc/test_coverage)](https://codeclimate.com/github/isubas/ileti_merkezi/test_coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/cecce51ce4d94f3ca1dcc1e99bdcbce6)](https://www.codacy.com/app/isubas/ileti_merkezi?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=isubas/ileti_merkezi&amp;utm_campaign=Badge_Coverage)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cecce51ce4d94f3ca1dcc1e99bdcbce6)](https://www.codacy.com/app/isubas/ileti_merkezi?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=isubas/ileti_merkezi&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/isubas/ileti_merkezi.svg?branch=master)](https://travis-ci.org/isubas/ileti_merkezi)
 
@@ -10,17 +10,17 @@ işlemlerini yapabilmek için hazırlanan Ruby istemcisidir.
 
 ## Kurulum
 
-Add this line to your application's Gemfile:
+Bu satırı Gemfile dosyasına ekleyin.
 
 ```ruby
 gem 'ileti_merkezi'
 ```
 
-And then execute:
+Ardından aşağıdaki komutu çalıştırın:
 
     $ bundle
 
-Or install it yourself as:
+Veya kendiniz aşağıdaki komut ile sisteme kurabilirsiniz:
 
     $ gem install ileti_merkezi
 
@@ -31,8 +31,8 @@ Or install it yourself as:
 Rails uygulamanızda `config/initializers/ileti_merkezi_configure.rb` dosyası oluştururak 
 aşağıdaki kodları içerisine yapıştırınız.
 
-Eğer kimlik doğrulama işlemini kullanıcı adı ve parola üzerinden yapmak istiyorsanız username ve passord bilgilerini,
-token tabalı yapmak istiyorsanız public_key ve secret_key bilgilerini doldurmanız gerekmektedir.
+Eğer kimlik doğrulama işlemini kullanıcı adı ve parola üzerinden yapmak istiyorsanız username ve password bilgilerini,
+token tabanlı yapmak istiyorsanız public_key ve secret_key bilgilerini doldurmanız gerekmektedir.
 
 Bu dört alanda doldurulmuş ise sistem token tabanlı doğrulama yapacaktır.
 
@@ -159,7 +159,7 @@ IM_SENDER = 'SENDER'
 ```ruby
   # return IletiMerkezi::Response
   response = IletiMerkezi.cancel(order_id)
-  # or
+  # veya
   cancel   = IletiMerkezi::Cancel.new(order_id)
   response = cancel.confirm
 
