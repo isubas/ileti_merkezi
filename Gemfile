@@ -11,6 +11,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'codacy-coverage', require: false
   gem 'minitest-focus'
   gem 'minitest-reporters'
   gem 'simplecov', require: false
