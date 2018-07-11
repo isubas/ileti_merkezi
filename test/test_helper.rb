@@ -1,9 +1,11 @@
-require 'codacy-coverage'
+require 'simplecov'
+require 'codacy-coverage' if ENV['CI']
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-    SimpleCov::Formatter::HTMLFormatter,
-    Codacy::Formatter
-])
+SimpleCov.start 'rails' do
+  add_filter '/app/channels'
+end
+
+Codacy::Reporter.start if ENV['CI']
 
 SimpleCov.start do
   add_filter '/test/'
@@ -33,4 +35,6 @@ VCR.configure do |config|
     config.filter_sensitive_data('HASH') { IletiMerkezi.configuration.hmac }
   end
   config.filter_sensitive_data('PHONE') { TEST_PHONE }
+  config.allow_http_connections_when_no_cassette = false
+  config.ignore_hosts 'api.codacy.com'
 end
