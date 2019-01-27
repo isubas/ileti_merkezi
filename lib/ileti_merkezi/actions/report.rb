@@ -3,6 +3,7 @@
 module IletiMerkezi
   # Report
   class Report
+    include XmlBuilder
     PATH = '/get-report'.freeze
 
     attr_reader :order_id, :page, :row_count
@@ -14,18 +15,15 @@ module IletiMerkezi
     end
 
     def query
-      request = Request.new(content: content, path: PATH)
+      request = Request.new(
+        path: PATH,
+        payload: hash_to_xml(
+          id: order_id,
+          page: page,
+          row_count: row_count
+        )
+      )
       request.call
-    end
-
-    private
-
-    def content
-      <<-XML.gsub(/^[ ]+/, '').strip
-      <id>#{order_id}</id>
-      <page>#{page}</page>
-      <rowCount>#{row_count}</rowCount>
-      XML
     end
   end
 end

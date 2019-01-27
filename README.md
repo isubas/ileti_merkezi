@@ -29,7 +29,7 @@ Veya kendiniz aşağıdaki komut ile sisteme kurabilirsiniz:
 
 ### Yapılandırma
 
-Rails uygulamanızda `config/initializers/ileti_merkezi_configure.rb` dosyası oluştururak 
+Rails uygulamanızda `config/initializers/ileti_merkezi_configure.rb` dosyası oluştururak
 aşağıdaki kodları içerisine yapıştırınız.
 
 Eğer kimlik doğrulama işlemini kullanıcı adı ve parola üzerinden yapmak istiyorsanız username ve password bilgilerini,
@@ -50,7 +50,7 @@ IletiMerkezi.configure do |config|
     verify_mode: OpenSSL::SSL::VERIFY_PEER,
     read_timeout: 30, # default 30
     open_timeout: 30 # default 30
-  } 
+  }
   # Kimlik Doğrulama: username ve password
   config.username = 'username'
   config.password = 'password'
@@ -60,7 +60,7 @@ IletiMerkezi.configure do |config|
 end
 ```
 
-Veya 
+Veya
 
 - Ortam değişkeleri ile yapılandırabilirsiniz. bknz: .env
 
@@ -83,15 +83,15 @@ IM_SENDER = 'SENDER'
 ```ruby
 
   args = {
-    send_datetime: '15/01/2017 12:00' # Opsiyonel 
-    sender: 'TEST' # Opsiyonel
-    phones: ['0555 555 00 01', '0555 555 00 02']
+    send_datetime: '15/01/2017 12:00', # Opsiyonel
+    sender: 'TEST', # Opsiyonel
+    phones: ['0555 555 00 01', '0555 555 00 02'],
     text: 'Test Mesajı'
   }
 
   # return IletiMerkezi::Response
   response = IletiMerkezi.send(args)
-  # veya  
+  # veya
   sms      = IletiMerkezi::Sms.new(args)
   response = sms.send
 
@@ -101,7 +101,7 @@ IM_SENDER = 'SENDER'
   response.error? # return true or false
   response.to_h
   # return hash
-  { 
+  {
     :status => {
       :code => "200",
       :message => "İşlem başarılı"
@@ -112,12 +112,12 @@ IM_SENDER = 'SENDER'
   }
 ```
 
-#### Çoklu Mesaj - Çoklu Alıcı 
+#### Çoklu Mesaj - Çoklu Alıcı
 
 ```ruby
   args = {
-    send_datetime: '15/01/2017 12:00' # Opsiyonel 
-    sender: 'TEST' # Opsiyonel
+    send_datetime: '15/01/2017 12:00', # Opsiyonel
+    sender: 'TEST', # Opsiyonel
     messages: [
       {
         text: 'Test Mesajı Bir',
@@ -142,7 +142,7 @@ IM_SENDER = 'SENDER'
   response.error? # return true or false
   response.to_h
   # return hash
-  { 
+  {
     :status => {
       :code => "200",
       :message => "İşlem başarılı"
@@ -168,7 +168,7 @@ IM_SENDER = 'SENDER'
   response.body # http raw body
   response.message # return status message
   response.error? # return true or false
-  response.to_h 
+  response.to_h
   # return hash
   {
     :status => {
@@ -191,12 +191,12 @@ IM_SENDER = 'SENDER'
   response.error? # return true or false
   response.to_h
   # return
-  { 
+  {
     :status => {
       :code => "200",
       :message => "İşlem başarılı"
     },
-    :balance => { 
+    :balance => {
       :amount => "1",
       :sms => "238760"
     }
@@ -206,8 +206,8 @@ IM_SENDER = 'SENDER'
 ### SMS Sipariş Raporlama
 
 #### Ek Bilgi:
-  
-  - **page**: zorunlu değildir. Bir siparişteki alıcı sayısı row_count(1000)'den fazla 
+
+  - **page**: zorunlu değildir. Bir siparişteki alıcı sayısı row_count(1000)'den fazla
              ise page parametresi kullanılarak diğer rapor sayfaları için istek yapılabilir.
   - **row_count**: Bir sayfada göntülenecek rapor sayısı
 
@@ -257,7 +257,7 @@ IM_SENDER = 'SENDER'
 
 ### Hesap Bilgileri
 
-**Not:** Kullanıcı adı ve paralo bilgilerinin yapılandırmada doldurulmuş olması gerekmektedir.  
+**Not:** Kullanıcı adı ve paralo bilgilerinin yapılandırmada doldurulmuş olması gerekmektedir.
 
 ```ruby
   IletiMerkezi.info
@@ -265,7 +265,7 @@ IM_SENDER = 'SENDER'
 
 ### Hesabınıza Tanımlı Başlık Bilgileri
 
-**Not:** Kullanıcı adı ve paralo bilgilerinin yapılandırmada doldurulmuş olması gerekmektedir. 
+**Not:** Kullanıcı adı ve paralo bilgilerinin yapılandırmada doldurulmuş olması gerekmektedir.
 
 ```ruby
   IletiMerkezi.senders
@@ -273,9 +273,9 @@ IM_SENDER = 'SENDER'
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/isubas/ileti_merkezi. 
-This project is intended to be a safe, welcoming space for collaboration, 
-and contributors are expected to adhere to the 
+Bug reports and pull requests are welcome on GitHub at https://github.com/isubas/ileti_merkezi.
+This project is intended to be a safe, welcoming space for collaboration,
+and contributors are expected to adhere to the
 [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
@@ -284,6 +284,6 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the IletiMerkezi project’s codebases, issue trackers, 
-chat rooms and mailing lists is expected to follow the 
+Everyone interacting in the IletiMerkezi project’s codebases, issue trackers,
+chat rooms and mailing lists is expected to follow the
 [code of conduct](https://github.com/isubas/ileti_merkezi/blob/master/CODE_OF_CONDUCT.md).

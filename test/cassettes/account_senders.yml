@@ -5,14 +5,7 @@ http_interactions:
     uri: http://dev.iletimerkezi.com/index.php?function=api&obj1=getSmsHeader&special_password=_Arg_ns_mmm&special_username=Ns_eemsm
     body:
       encoding: UTF-8
-      string: |-
-        <smsApi>
-        <userInfo>
-        <userName>USERNAME</userName>
-        <userPassword>PASSWORD</userPassword>
-        <smsType>2</smsType>
-        </userInfo>
-        </smsApi>
+      string: "<smsApi><userInfo><userName>USERNAME</userName><userPassword>PASSWORD</userPassword><smsType>2</smsType></userInfo></smsApi>"
     headers:
       Accept:
       - xml
@@ -30,21 +23,23 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 11 Mar 2018 13:30:16 GMT
+      - Sun, 27 Jan 2019 10:20:14 GMT
       Content-Type:
-      - text/html; charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '64'
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=oofvvmtuu9mk2290sa7607hch6; path=/
+      - emsid=u8gibr78rr7sm3pk9vek71i4q2; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
-      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      - no-cache
       Pragma:
       - no-cache
+      Vary:
+      - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       Strict-Transport-Security:
@@ -52,6 +47,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<smsHeaderInfo><headerInfo>BAR</headerInfo><headerInfo>FOO</headerInfo></smsHeaderInfo>"
-    http_version: 
-  recorded_at: Sun, 11 Mar 2018 13:30:16 GMT
+    http_version:
+  recorded_at: Sun, 27 Jan 2019 10:20:14 GMT
 recorded_with: VCR 4.0.0

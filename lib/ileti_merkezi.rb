@@ -6,16 +6,10 @@ require 'ox'
 files = %w[
   version
   error
-  configuration
-  account
-  authentication
-  balance
-  cancel
+  utils
+  actions
   message
-  request
-  report
   response
-  sms
   status
 ]
 

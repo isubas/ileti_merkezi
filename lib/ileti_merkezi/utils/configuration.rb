@@ -16,7 +16,7 @@ module IletiMerkezi
                   :request_overrides
 
     ENDPOINT = 'http://api.iletimerkezi.com/v1'.freeze
-    SENDER   = 'ILETI MRKZI'.freeze
+    SENDER   = 'APITEST'.freeze
 
     def initialize
       @endpoint          = ENV['IM_ENDPOINT'] || ENDPOINT

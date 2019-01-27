@@ -4,6 +4,8 @@ module IletiMerkezi
   # Request
   # :reek:TooManyInstanceVariables { max_instance_variables: 6 }
   class Request
+    include XmlBuilder
+
     DEFAULT_OPTIONS = {
       use_ssl: false,
       verify_mode: OpenSSL::SSL::VERIFY_PEER,
@@ -22,9 +24,9 @@ module IletiMerkezi
     # :reek:Attribute
     attr_writer :uri
 
-    def initialize(body: nil, content: '', path: '')
+    def initialize(body: nil, payload: '', path: '')
       @config  = IletiMerkezi.configuration
-      @content = content
+      @payload = payload
       @path    = path
       @body    = body
       @uri     = URI.parse(@config.endpoint + @path)
@@ -38,24 +40,15 @@ module IletiMerkezi
 
     private
 
-    attr_reader :config, :uri, :content
-
-    def create_order
-      <<-XML.gsub(/^[ ]+/, '').strip
-      <order>
-        #{content}
-      </order>
-      XML
-    end
+    attr_reader :config, :uri, :payload
 
     def body
-      <<-XML.gsub(/^[ ]+/, '').strip
-      <?xml version="1.0" encoding="UTF-8" ?>
-      <request>
-        #{Authentication.content}
-        #{create_order}
-      </request>
-      XML
+      hash_to_xml(
+        request: {
+          authentication: Authentication.to_hash,
+          order: payload
+        }
+      )
     end
 
     def http

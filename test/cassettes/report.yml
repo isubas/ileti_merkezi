@@ -5,19 +5,7 @@ http_interactions:
     uri: http://api.iletimerkezi.com/v1/get-report
     body:
       encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8" ?>
-        <request>
-        <authentication>
-        <username>USERNAME</username>
-        <password>PASSWORD</password>
-        </authentication>
-        <order>
-        <id>51502516</id>
-        <page>1</page>
-        <rowCount>1000</rowCount>
-        </order>
-        </request>
+      string: "<request><authentication><username>USERNAME</username><password>PASSWORD</password></authentication><order><id>71798040</id><page>1</page><row_count>1000</row_count></order></request>"
     headers:
       Accept:
       - xml
@@ -36,15 +24,15 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 11 Mar 2018 13:35:37 GMT
+      - Sun, 27 Jan 2019 10:30:13 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
-      - '305'
+      - '308'
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=l622mklmosm5j24duiclhs8dq7; path=/
+      - emsid=egnrshngasu4439b1giqouun10; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -67,22 +55,26 @@ http_interactions:
             <message>İşlem başarılı</message>
           </status>
           <order>
-            <id>51502516</id>
+            <id>00001</id>
             <status>114</status>
-            <total>1</total>
-            <delivered>1</delivered>
+            <total>2</total>
+            <delivered>2</delivered>
             <undelivered></undelivered>
             <waiting></waiting>
-            <submitAt>2018-03-11 16:30:17</submitAt>
-            <sendAt>2018-03-11 16:30:00</sendAt>
-            <sender>ILETI MRKZI</sender>
+            <submitAt>2019-01-27 13:29:29</submitAt>
+            <sendAt>2019-01-27 13:29:00</sendAt>
+            <sender>APITEST</sender>
             <price>2</price>
             <message>
-              <number>+905519999999</number>
+              <number>PHONE</number>
+              <status>111</status>
+            </message>
+            <message>
+              <number>PHONE</number>
               <status>111</status>
             </message>
           </order>
         </response>
-    http_version: 
-  recorded_at: Sun, 11 Mar 2018 13:35:37 GMT
+    http_version:
+  recorded_at: Sun, 27 Jan 2019 10:30:13 GMT
 recorded_with: VCR 4.0.0

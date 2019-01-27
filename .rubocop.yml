@@ -10,4 +10,4 @@ Style/Documentation:
     - 'lib/iletimerkezisms.rb'
 
 Metrics/LineLength:
-  Max: 85
+  Max: 100

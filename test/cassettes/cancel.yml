@@ -5,17 +5,7 @@ http_interactions:
     uri: http://api.iletimerkezi.com/v1/cancel-order
     body:
       encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8" ?>
-        <request>
-        <authentication>
-        <username>USERNAME</username>
-        <password>PASSWORD</password>
-        </authentication>
-        <order>
-        <id>100</id>
-        </order>
-        </request>
+      string: "<request><authentication><username>USERNAME</username><password>PASSWORD</password></authentication><order><id>100</id></order></request>"
     headers:
       Accept:
       - xml
@@ -34,7 +24,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 11 Mar 2018 13:30:16 GMT
+      - Sun, 27 Jan 2019 10:14:58 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
@@ -42,7 +32,7 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=j2an04uor8mk9pq182nik7ous7; path=/
+      - emsid=3hkq9eiirc65inl8icvu7k8fr3; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -60,5 +50,5 @@ http_interactions:
           </status>
         </response>
     http_version: 
-  recorded_at: Sun, 11 Mar 2018 13:30:16 GMT
+  recorded_at: Sun, 27 Jan 2019 10:14:58 GMT
 recorded_with: VCR 4.0.0

@@ -5,16 +5,6 @@ class CancelTest < Minitest::Test
     refute_nil IletiMerkezi::Cancel::PATH
   end
 
-  def test_content
-    cancel = IletiMerkezi::Cancel.new(100)
-
-    content = <<-XML.gsub(/^[ ]+/, '').strip
-    <id>100</id>
-    XML
-
-    assert_equal cancel.send(:content), content
-  end
-
   def test_confirm
     VCR.use_cassette('cancel') do
       response = IletiMerkezi::Cancel.new(100)

@@ -20,7 +20,7 @@ require 'vcr'
 
 Minitest::Reporters.use! [Minitest::Reporters::SpecReporter.new]
 
-TEST_PHONE = ENV.fetch('TEST_PHONE', '0555 444 33 22')
+TEST_PHONE = ENV.fetch('TEST_PHONE', '0999 888 77 66')
 
 VCR.configure do |config|
   config.cassette_library_dir = 'test/cassettes'

@@ -5,11 +5,7 @@ http_interactions:
     uri: http://dev.iletimerkezi.com/index.php?function=api&obj1=getUserInfo&special_password=_Arg_ns_mmm&special_username=Ns_eemsm
     body:
       encoding: UTF-8
-      string: |-
-        <userInfo>
-        <userName>USERNAME</userName>
-        <userPassword>PASSWORD</userPassword>
-        </userInfo>
+      string: "<userInfo><userName>USERNAME</userName><userPassword>PASSWORD</userPassword></userInfo>"
     headers:
       Accept:
       - xml
@@ -27,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 11 Mar 2018 13:29:24 GMT
+      - Sun, 27 Jan 2019 10:14:59 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
@@ -35,7 +31,7 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=hlv0e5ubkf4dpne6ol6qlq5g96; path=/
+      - emsid=jsfbbnnq79r8q47gvqrlfj4hf5; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -51,12 +47,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "\n\t\t\t\t<userInfo>\n\t\t\t\t\t<name_surname>Name</name_surname>\n\t\t\t
-        \ \t\t<tc_number></tc_number>\n\t\t\t  \t\t<title></title>\n\t\t\t  \t\t<email>Email</email>\n\t\t\t
-        \ \t\t<gsm>USERNAME</gsm>\n\t\t\t  \t\t<password>PASSWORD</password>\n\t\t\t
+        \ \t\t<tc_number></tc_number>\n\t\t\t  \t\t<title></title>\n\t\t\t  \t\t<email>email</email>\n\t\t\t
+        \ \t\t<gsm>gsm</gsm>\n\t\t\t  \t\t<password>password</password>\n\t\t\t
         \ \t\t<commercial_title></commercial_title>\n\t\t\t  \t\t<gsm2></gsm2>\n\t\t\t
         \ \t\t<phone_number></phone_number>\n\t\t\t  \t\t<fax_number></fax_number>\n\t\t\t
         \ \t\t<bill_address></bill_address>\n\t\t\t  \t\t<zone></zone>\n\t\t\t  \t\t<city></city>\n\t\t\t
         \ \t\t<zip></zip>\n\t\t\t  \t\t<charge_home></charge_home>\n\t\t\t \t\t<charge_number></charge_number>\n\t\t\t\t</userInfo>\n\t\t\t\t"
-    http_version: 
-  recorded_at: Sun, 11 Mar 2018 13:29:24 GMT
+    http_version:
+  recorded_at: Sun, 27 Jan 2019 10:14:59 GMT
 recorded_with: VCR 4.0.0

@@ -29,7 +29,7 @@ class SmsTest < Minitest::Test
 
     sms = IletiMerkezi::Sms.new({})
 
-    assert_equal sms.sender, 'ILETI MRKZI'
+    assert_equal sms.sender, 'APITEST'
   end
 
   def test_send_datetime
@@ -41,7 +41,7 @@ class SmsTest < Minitest::Test
     assert_equal sms.send_datetime, datetime
   end
 
-  def test_single_mesage_send
+  def test_single_message_send
     sms = IletiMerkezi::Sms.new(
       text: 'Test Message',
       phones: [TEST_PHONE]
@@ -58,8 +58,7 @@ class SmsTest < Minitest::Test
     end
   end
 
-
-  def test_multi_mesages_send
+  def test_multi_messages_send
     sms = IletiMerkezi::Sms.new(
       messages: [
         {
@@ -69,7 +68,7 @@ class SmsTest < Minitest::Test
         {
           text: 'Second Test Message',
           phones: [TEST_PHONE]
-        },
+        }
       ]
     )
 

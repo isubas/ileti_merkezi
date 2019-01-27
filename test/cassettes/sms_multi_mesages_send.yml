@@ -5,29 +5,9 @@ http_interactions:
     uri: http://api.iletimerkezi.com/v1/send-sms
     body:
       encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8" ?>
-        <request>
-        <authentication>
-        <username>USERNAME</username>
-        <password>PASSWORD</password>
-        </authentication>
-        <order>
-        <sender>ILETI MRKZI</sender>
-        <sendDateTime>11/03/2018 16:30</sendDateTime>
-        <message>
-        <text>First Test Message</text>
-        <receipents>
-        <number>0USERNAME</number>
-        </receipents>
-        </message><message>
-        <text>Second Test Message</text>
-        <receipents>
-        <number>0USERNAME</number>
-        </receipents>
-        </message>
-        </order>
-        </request>
+      string: "<request><authentication><username>USERNAME</username><password>PASSWORD</password></authentication><order><sender>APITEST</sender><sendDateTime>27/01/2019
+        13:29</sendDateTime><message><text>First Test Messages</text><receipents><number>USERNAME</number></receipents></message><message><text>Second
+        Test Messages</text><receipents><number>USERNAME</number></receipents></message></order></request>"
     headers:
       Accept:
       - xml
@@ -46,15 +26,15 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 11 Mar 2018 13:30:17 GMT
+      - Sun, 27 Jan 2019 10:29:29 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
-      - '163'
+      - '162'
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=bop5iuo86dl3cauhldsok1bou4; path=/
+      - emsid=kfbhukk2chejjnhvup4n5b5qk2; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -77,9 +57,9 @@ http_interactions:
             <message>İşlem başarılı</message>
           </status>
           <order>
-            <id>51502517</id>
+            <id>00001</id>
           </order>
         </response>
-    http_version: 
-  recorded_at: Sun, 11 Mar 2018 13:30:17 GMT
+    http_version:
+  recorded_at: Sun, 27 Jan 2019 10:29:29 GMT
 recorded_with: VCR 4.0.0

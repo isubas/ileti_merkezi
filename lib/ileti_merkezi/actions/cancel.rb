@@ -3,6 +3,8 @@
 module IletiMerkezi
   # Cancel
   class Cancel
+    include XmlBuilder
+
     PATH = '/cancel-order'.freeze
 
     attr_reader :order_id
@@ -12,14 +14,11 @@ module IletiMerkezi
     end
 
     def confirm
-      request = Request.new(content: content, path: PATH)
+      request = Request.new(
+        path: PATH,
+        payload: hash_to_xml(id: order_id)
+      )
       request.call
-    end
-
-    private
-
-    def content
-      "<id>#{order_id}</id>"
     end
   end
 end

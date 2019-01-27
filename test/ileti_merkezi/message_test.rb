@@ -25,29 +25,20 @@ class MessageTest < Minitest::Test
     refute(invalid_message.valid?)
   end
 
-  def test_content
-    content = <<-XML.gsub(/^[ ]+/, '').strip
-    <message>
-      <text>Test Message</text>
-      <receipents>
-        <number>1111</number>
-        <number>2222</number>
-      </receipents>
-    </message>
-    XML
-
-    assert_equal @message.content, content
-  end
-
-  def test_to_s
-    text = 'Text: Test Message, Phones: ["1111", "2222"]'
-    assert_equal @message.to_s, text
+  def test_to_hash
+    hash = {
+      text: 'Test Message',
+      receipents: {
+        number: ['1111', '2222']
+      }
+    }
+    assert_equal @message.to_hash, hash
   end
 
   def test_raises_error_when_message_is_invalid
     assert_raises IletiMerkezi::InvalidMessageError do
       message = IletiMerkezi::Message.new(nil, 'Test Message')
-      message.content
+      message.to_hash
     end
   end
 end
