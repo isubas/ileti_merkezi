@@ -11,10 +11,10 @@ group :development, :test do
 end
 
 group :test do
-  gem 'codacy-coverage', require: false
+  gem 'codacy-coverage', '>= 2.1.0', require: false
   gem 'minitest-focus'
   gem 'minitest-reporters'
-  gem 'simplecov', require: false
+  gem 'simplecov', '>= 0.16.1', require: false
   gem 'vcr'
   gem 'webmock'
 end
