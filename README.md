@@ -46,7 +46,7 @@ IletiMerkezi.configure do |config|
   config.sender            = 'FOO'
   # opsiyonel
   config.request_overrides = {
-    use_ssl: true # default false
+    use_ssl: true, # default false
     verify_mode: OpenSSL::SSL::VERIFY_PEER,
     read_timeout: 30, # default 30
     open_timeout: 30 # default 30
