@@ -1,0 +1,32 @@
+name: Test
+on: [push, pull_request]
+
+jobs:
+  linter:
+    name: Run linters
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.5
+      - name: Install dependencies
+        run: bundle install
+      - name: Run rubocop
+        run: bundle exec rubocop
+  test:
+    name: Run tests
+    strategy:
+      matrix:
+        os: [ubuntu]
+        ruby: [2.5, 2.6, 2.7]
+    runs-on: ${{ matrix.os }}-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+      - name: Install dependencies
+        run: bundle install
+      - name: Run rubocop
+        run: bundle exec rake test
