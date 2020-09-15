@@ -5,7 +5,7 @@ http_interactions:
     uri: http://api.iletimerkezi.com/v1/get-report
     body:
       encoding: UTF-8
-      string: "<request><authentication><username>USERNAME</username><password>PASSWORD</password></authentication><order><id>71798040</id><page>1</page><row_count>1000</row_count></order></request>"
+      string: "<request><authentication><username>USERNAME</username><password>PASSWORD</password></authentication><order><id>1</id><page>1</page><row_count>1000</row_count></order></request>"
     headers:
       Accept:
       - xml
@@ -17,64 +17,37 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 200
+      code: 455
       message: !binary |-
-        xLDFn2xlbSBiYcWfYXLEsWzEsQ==
+        U2lwYXJsdsdsds5hbWFkxLE=
     headers:
       Server:
       - nginx
       Date:
-      - Sun, 27 Jan 2019 10:30:13 GMT
+      - Tue, 15 Sep 2020 08:00:08 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
-      - '308'
+      - '150'
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=egnrshngasu4439b1giqouun10; path=/
+      - emsid=dbh32cffua9uos38tuisdnf6l6; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
       - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
       Pragma:
       - no-cache
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
-      Strict-Transport-Security:
-      - max-age=15768000
     body:
       encoding: UTF-8
       string: |
         <?xml version="1.0" encoding="UTF-8"?>
         <response>
           <status>
-            <code>200</code>
-            <message>İşlem başarılı</message>
+            <code>455</code>
+            <message>Sipariş bulunamadı</message>
           </status>
-          <order>
-            <id>00001</id>
-            <status>114</status>
-            <total>2</total>
-            <delivered>2</delivered>
-            <undelivered></undelivered>
-            <waiting></waiting>
-            <submitAt>2019-01-27 13:29:29</submitAt>
-            <sendAt>2019-01-27 13:29:00</sendAt>
-            <sender>APITEST</sender>
-            <price>2</price>
-            <message>
-              <number>PHONE</number>
-              <status>111</status>
-            </message>
-            <message>
-              <number>PHONE</number>
-              <status>111</status>
-            </message>
-          </order>
         </response>
-    http_version:
-  recorded_at: Sun, 27 Jan 2019 10:30:13 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Tue, 15 Sep 2020 08:00:08 GMT
+recorded_with: VCR 6.0.0

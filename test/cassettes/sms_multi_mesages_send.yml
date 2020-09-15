@@ -5,9 +5,9 @@ http_interactions:
     uri: http://api.iletimerkezi.com/v1/send-sms
     body:
       encoding: UTF-8
-      string: "<request><authentication><username>USERNAME</username><password>PASSWORD</password></authentication><order><sender>APITEST</sender><sendDateTime>27/01/2019
-        13:29</sendDateTime><message><text>First Test Messages</text><receipents><number>USERNAME</number></receipents></message><message><text>Second
-        Test Messages</text><receipents><number>USERNAME</number></receipents></message></order></request>"
+      string: "<request><authentication><username>USERNAME</username><password>PASSWORD</password></authentication><order><sender>APITEST</sender><sendDateTime>15/09/2020
+        11:00</sendDateTime><message><text>First Test Message</text><receipents><number>PHONE</number></receipents></message><message><text>Second
+        Test Message</text><receipents><number>PHONE</number></receipents></message></order></request>"
     headers:
       Accept:
       - xml
@@ -19,34 +19,27 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 200
+      code: 452
       message: !binary |-
-        xLDFn2xlbSBiYcWfYXLEsWzEsQ==
-    headers:
+        TWVzYWogYWdsdsdsdsdsds
       Server:
       - nginx
       Date:
-      - Sun, 27 Jan 2019 10:29:29 GMT
+      - Tue, 15 Sep 2020 08:00:09 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
-      - '162'
+      - '156'
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=kfbhukk2chejjnhvup4n5b5qk2; path=/
+      - emsid=sqnr78to8niqmlnd8u367utjo4; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
       - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
       Pragma:
       - no-cache
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
-      Strict-Transport-Security:
-      - max-age=15768000
     body:
       encoding: UTF-8
       string: |
@@ -60,6 +53,5 @@ http_interactions:
             <id>00001</id>
           </order>
         </response>
-    http_version:
-  recorded_at: Sun, 27 Jan 2019 10:29:29 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Tue, 15 Sep 2020 08:00:09 GMT
+recorded_with: VCR 6.0.0

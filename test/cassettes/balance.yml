@@ -19,20 +19,20 @@ http_interactions:
     status:
       code: 200
       message: !binary |-
-        xLDFn2xlbSBiYcWfYXLEsWzEsQ==
+        xLDFn2xlbSBiYcWfAAsWzEsQ==
     headers:
       Server:
       - nginx
       Date:
-      - Sun, 27 Jan 2019 10:14:59 GMT
+      - Tue, 15 Sep 2020 08:00:09 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
-      - '169'
+      - '172'
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=an8iq26nfug21os6mr1n2ps2a3; path=/
+      - emsid=8uvj76p9ru72k4702rp4mdvqn6; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -56,9 +56,8 @@ http_interactions:
           </status>
           <balance>
             <amount>1</amount>
-            <sms>1</sms>
+            <sms>100</sms>
           </balance>
         </response>
-    http_version:
-  recorded_at: Sun, 27 Jan 2019 10:14:59 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Tue, 15 Sep 2020 08:00:09 GMT
+recorded_with: VCR 6.0.0

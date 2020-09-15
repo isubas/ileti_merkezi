@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 27 Jan 2019 10:20:14 GMT
+      - Tue, 15 Sep 2020 08:00:07 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
@@ -31,7 +31,7 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=u8gibr78rr7sm3pk9vek71i4q2; path=/
+      - emsid=f1nit0i6mo3cj0t0p1s8b1tmi6; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -47,6 +47,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<smsHeaderInfo><headerInfo>BAR</headerInfo><headerInfo>FOO</headerInfo></smsHeaderInfo>"
-    http_version:
-  recorded_at: Sun, 27 Jan 2019 10:20:14 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Tue, 15 Sep 2020 08:00:07 GMT
+recorded_with: VCR 6.0.0

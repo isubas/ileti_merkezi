@@ -23,15 +23,15 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sun, 27 Jan 2019 10:14:59 GMT
+      - Tue, 15 Sep 2020 08:00:08 GMT
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
-      - '315'
+      - '314'
       Connection:
       - keep-alive
       Set-Cookie:
-      - emsid=jsfbbnnq79r8q47gvqrlfj4hf5; path=/
+      - emsid=lbrtd9gm1mgglgd7a96sosatm5; path=/
       Expires:
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control:
@@ -47,12 +47,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "\n\t\t\t\t<userInfo>\n\t\t\t\t\t<name_surname>Name</name_surname>\n\t\t\t
-        \ \t\t<tc_number></tc_number>\n\t\t\t  \t\t<title></title>\n\t\t\t  \t\t<email>email</email>\n\t\t\t
-        \ \t\t<gsm>gsm</gsm>\n\t\t\t  \t\t<password>password</password>\n\t\t\t
+        \ \t\t<tc_number></tc_number>\n\t\t\t  \t\t<title></title>\n\t\t\t  \t\t<email></email>\n\t\t\t
+        \ \t\t<gsm>USERNAME</gsm>\n\t\t\t  \t\t<password>123456</password>\n\t\t\t
         \ \t\t<commercial_title></commercial_title>\n\t\t\t  \t\t<gsm2></gsm2>\n\t\t\t
         \ \t\t<phone_number></phone_number>\n\t\t\t  \t\t<fax_number></fax_number>\n\t\t\t
         \ \t\t<bill_address></bill_address>\n\t\t\t  \t\t<zone></zone>\n\t\t\t  \t\t<city></city>\n\t\t\t
         \ \t\t<zip></zip>\n\t\t\t  \t\t<charge_home></charge_home>\n\t\t\t \t\t<charge_number></charge_number>\n\t\t\t\t</userInfo>\n\t\t\t\t"
-    http_version:
-  recorded_at: Sun, 27 Jan 2019 10:14:59 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Tue, 15 Sep 2020 08:00:08 GMT
+recorded_with: VCR 6.0.0
