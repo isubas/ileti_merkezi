@@ -29,7 +29,7 @@ Veya kendiniz aşağıdaki komut ile sisteme kurabilirsiniz:
 
 ### Yapılandırma
 
-Rails uygulamanızda `config/initializers/ileti_merkezi_configure.rb` dosyası oluştururak
+Rails uygulamanızda `config/initializers/ileti_merkezi_configure.rb` dosyası oluşturarak
 aşağıdaki kodları içerisine yapıştırınız.
 
 Eğer kimlik doğrulama işlemini kullanıcı adı ve parola üzerinden yapmak istiyorsanız username ve password bilgilerini,
