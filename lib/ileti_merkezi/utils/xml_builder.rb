@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module IletiMerkezi
   # XmlBuilder
   module XmlBuilder
-    XML_TAG = '<%<tag>s>%<content>s</%<tag>s>'.freeze
+    XML_TAG = '<%<tag>s>%<content>s</%<tag>s>'
 
     def hash_to_xml(hash)
       hash.each_with_object([]) do |(key, value), tags|

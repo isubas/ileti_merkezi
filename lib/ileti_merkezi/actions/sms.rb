@@ -7,7 +7,7 @@ module IletiMerkezi
 
     attr_reader :messages, :sender, :send_datetime
 
-    PATH = '/send-sms'.freeze
+    PATH = '/send-sms'
 
     def initialize(params = {})
       @messages      = build_messages(params)

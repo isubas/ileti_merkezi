@@ -5,7 +5,7 @@ module IletiMerkezi
   class Account
     PATH =
       'http://dev.iletimerkezi.com/index.php?function=api&'\
-      '&special_username=Ns_eemsm&special_password=_Arg_ns_mmm'.freeze
+      '&special_username=Ns_eemsm&special_password=_Arg_ns_mmm'
 
     class << self
       include XmlBuilder

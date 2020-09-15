@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - 'iletimerkezisms.gemspec'
     - 'test/**/**'
+  NewCops: enable
 
 Style/Documentation:
   Exclude:

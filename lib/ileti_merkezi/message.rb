@@ -6,7 +6,7 @@ module IletiMerkezi
     attr_reader :phones, :text
 
     def initialize(phones, text)
-      @phones = [*phones]
+      @phones = Array(phones)
       @text   = text.to_s
     end
 

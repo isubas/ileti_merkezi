@@ -5,7 +5,7 @@ module IletiMerkezi
   class Cancel
     include XmlBuilder
 
-    PATH = '/cancel-order'.freeze
+    PATH = '/cancel-order'
 
     attr_reader :order_id
 

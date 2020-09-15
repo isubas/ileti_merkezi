@@ -4,7 +4,7 @@ module IletiMerkezi
   # Report
   class Report
     include XmlBuilder
-    PATH = '/get-report'.freeze
+    PATH = '/get-report'
 
     attr_reader :order_id, :page, :row_count
 

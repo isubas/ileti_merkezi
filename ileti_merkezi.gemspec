@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ileti_merkezi/version'
@@ -17,7 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir['lib/**/*', 'CHANGELOG.md', 'LICENSE.txt', 'README.md']
   spec.require_paths = ['lib']
-
+  spec.required_ruby_version = '>= 2.4'
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'minitest', '~> 5.8'
   spec.add_development_dependency 'rake', '~> 13.0'

@@ -3,7 +3,7 @@
 module IletiMerkezi
   # Balance
   module Balance
-    PATH = '/get-balance'.freeze
+    PATH = '/get-balance'
 
     module_function
 

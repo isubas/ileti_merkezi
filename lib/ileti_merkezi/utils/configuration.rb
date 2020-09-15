@@ -15,10 +15,10 @@ module IletiMerkezi
                   :secret_key,
                   :request_overrides
 
-    ENDPOINT = 'http://api.iletimerkezi.com/v1'.freeze
-    SENDER   = 'APITEST'.freeze
+    ENDPOINT = 'http://api.iletimerkezi.com/v1'
+    SENDER   = 'APITEST'
 
-    def initialize
+    def initialize # rubocop:disable Lint/MissingSuper
       @endpoint          = ENV['IM_ENDPOINT'] || ENDPOINT
       @username          = ENV['IM_USERNAME']
       @password          = ENV['IM_PASSWORD']
