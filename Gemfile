@@ -18,5 +18,5 @@ group :test do
   gem 'minitest-reporters'
   gem 'simplecov', '>= 0.16.1', require: false
   gem 'vcr'
-  gem 'webmock'
+  gem 'webmock', '>= 3.9.1'
 end
